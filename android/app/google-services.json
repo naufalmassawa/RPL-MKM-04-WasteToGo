@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "22938956702",
+    "project_id": "waste-to-goo",
+    "storage_bucket": "waste-to-goo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:22938956702:android:eab7d98b68db9b6ad65c8f",
+        "android_client_info": {
+          "package_name": "com.example.waste_to_go"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "22938956702-c04p2o22daeigpar2d5o8dk176ctse4h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCk36_vTNRzfwAQEZS66VLpig1aiYeFawk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "22938956702-c04p2o22daeigpar2d5o8dk176ctse4h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
