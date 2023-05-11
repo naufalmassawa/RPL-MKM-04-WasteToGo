@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../blocs/page_cubit.dart';
+import '../blocs/page_and_kategory_cubit.dart';
 import '../utils/constants.dart';
 
 class ButtomNavItems extends StatelessWidget {
