@@ -16,7 +16,7 @@ abstract class ProductModelList with _$ProductModelList {
 abstract class ProductModel with _$ProductModel {
   const factory ProductModel({
     String? id,
-    String? imgUrl,
+    String? imageUrl,
     String? name,
     String? desc,
     String? date,
@@ -24,6 +24,7 @@ abstract class ProductModel with _$ProductModel {
     double? long,
     num? price,
     String? userId,
+    String? expired,
   }) = _ProductModel;
 
   factory ProductModel.fromJson(Map<String, dynamic> json) =>
