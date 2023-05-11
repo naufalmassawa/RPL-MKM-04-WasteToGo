@@ -21,7 +21,7 @@ Map<String, dynamic> _$$_ProductModelListToJson(_$_ProductModelList instance) =>
 _$_ProductModel _$$_ProductModelFromJson(Map<String, dynamic> json) =>
     _$_ProductModel(
       id: json['id'] as String?,
-      imgUrl: json['imgUrl'] as String?,
+      imageUrl: json['imageUrl'] as String?,
       name: json['name'] as String?,
       desc: json['desc'] as String?,
       date: json['date'] as String?,
@@ -29,12 +29,13 @@ _$_ProductModel _$$_ProductModelFromJson(Map<String, dynamic> json) =>
       long: (json['long'] as num?)?.toDouble(),
       price: json['price'] as num?,
       userId: json['userId'] as String?,
+      expired: json['expired'] as String?,
     );
 
 Map<String, dynamic> _$$_ProductModelToJson(_$_ProductModel instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'imgUrl': instance.imgUrl,
+      'imageUrl': instance.imageUrl,
       'name': instance.name,
       'desc': instance.desc,
       'date': instance.date,
@@ -42,4 +43,5 @@ Map<String, dynamic> _$$_ProductModelToJson(_$_ProductModel instance) =>
       'long': instance.long,
       'price': instance.price,
       'userId': instance.userId,
+      'expired': instance.expired,
     };

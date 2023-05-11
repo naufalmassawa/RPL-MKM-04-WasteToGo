@@ -166,7 +166,7 @@ ProductModel _$ProductModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ProductModel {
   String? get id => throw _privateConstructorUsedError;
-  String? get imgUrl => throw _privateConstructorUsedError;
+  String? get imageUrl => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
   String? get desc => throw _privateConstructorUsedError;
   String? get date => throw _privateConstructorUsedError;
@@ -174,6 +174,7 @@ mixin _$ProductModel {
   double? get long => throw _privateConstructorUsedError;
   num? get price => throw _privateConstructorUsedError;
   String? get userId => throw _privateConstructorUsedError;
+  String? get expired => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -189,14 +190,15 @@ abstract class $ProductModelCopyWith<$Res> {
   @useResult
   $Res call(
       {String? id,
-      String? imgUrl,
+      String? imageUrl,
       String? name,
       String? desc,
       String? date,
       double? lat,
       double? long,
       num? price,
-      String? userId});
+      String? userId,
+      String? expired});
 }
 
 /// @nodoc
@@ -213,7 +215,7 @@ class _$ProductModelCopyWithImpl<$Res, $Val extends ProductModel>
   @override
   $Res call({
     Object? id = freezed,
-    Object? imgUrl = freezed,
+    Object? imageUrl = freezed,
     Object? name = freezed,
     Object? desc = freezed,
     Object? date = freezed,
@@ -221,15 +223,16 @@ class _$ProductModelCopyWithImpl<$Res, $Val extends ProductModel>
     Object? long = freezed,
     Object? price = freezed,
     Object? userId = freezed,
+    Object? expired = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      imgUrl: freezed == imgUrl
-          ? _value.imgUrl
-          : imgUrl // ignore: cast_nullable_to_non_nullable
+      imageUrl: freezed == imageUrl
+          ? _value.imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
               as String?,
       name: freezed == name
           ? _value.name
@@ -258,6 +261,10 @@ class _$ProductModelCopyWithImpl<$Res, $Val extends ProductModel>
       userId: freezed == userId
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      expired: freezed == expired
+          ? _value.expired
+          : expired // ignore: cast_nullable_to_non_nullable
               as String?,
     ) as $Val);
   }
@@ -273,14 +280,15 @@ abstract class _$$_ProductModelCopyWith<$Res>
   @useResult
   $Res call(
       {String? id,
-      String? imgUrl,
+      String? imageUrl,
       String? name,
       String? desc,
       String? date,
       double? lat,
       double? long,
       num? price,
-      String? userId});
+      String? userId,
+      String? expired});
 }
 
 /// @nodoc
@@ -295,7 +303,7 @@ class __$$_ProductModelCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
-    Object? imgUrl = freezed,
+    Object? imageUrl = freezed,
     Object? name = freezed,
     Object? desc = freezed,
     Object? date = freezed,
@@ -303,15 +311,16 @@ class __$$_ProductModelCopyWithImpl<$Res>
     Object? long = freezed,
     Object? price = freezed,
     Object? userId = freezed,
+    Object? expired = freezed,
   }) {
     return _then(_$_ProductModel(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      imgUrl: freezed == imgUrl
-          ? _value.imgUrl
-          : imgUrl // ignore: cast_nullable_to_non_nullable
+      imageUrl: freezed == imageUrl
+          ? _value.imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
               as String?,
       name: freezed == name
           ? _value.name
@@ -341,6 +350,10 @@ class __$$_ProductModelCopyWithImpl<$Res>
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
               as String?,
+      expired: freezed == expired
+          ? _value.expired
+          : expired // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -350,14 +363,15 @@ class __$$_ProductModelCopyWithImpl<$Res>
 class _$_ProductModel implements _ProductModel {
   const _$_ProductModel(
       {this.id,
-      this.imgUrl,
+      this.imageUrl,
       this.name,
       this.desc,
       this.date,
       this.lat,
       this.long,
       this.price,
-      this.userId});
+      this.userId,
+      this.expired});
 
   factory _$_ProductModel.fromJson(Map<String, dynamic> json) =>
       _$$_ProductModelFromJson(json);
@@ -365,7 +379,7 @@ class _$_ProductModel implements _ProductModel {
   @override
   final String? id;
   @override
-  final String? imgUrl;
+  final String? imageUrl;
   @override
   final String? name;
   @override
@@ -380,10 +394,12 @@ class _$_ProductModel implements _ProductModel {
   final num? price;
   @override
   final String? userId;
+  @override
+  final String? expired;
 
   @override
   String toString() {
-    return 'ProductModel(id: $id, imgUrl: $imgUrl, name: $name, desc: $desc, date: $date, lat: $lat, long: $long, price: $price, userId: $userId)';
+    return 'ProductModel(id: $id, imageUrl: $imageUrl, name: $name, desc: $desc, date: $date, lat: $lat, long: $long, price: $price, userId: $userId, expired: $expired)';
   }
 
   @override
@@ -392,20 +408,22 @@ class _$_ProductModel implements _ProductModel {
         (other.runtimeType == runtimeType &&
             other is _$_ProductModel &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.imgUrl, imgUrl) || other.imgUrl == imgUrl) &&
+            (identical(other.imageUrl, imageUrl) ||
+                other.imageUrl == imageUrl) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.desc, desc) || other.desc == desc) &&
             (identical(other.date, date) || other.date == date) &&
             (identical(other.lat, lat) || other.lat == lat) &&
             (identical(other.long, long) || other.long == long) &&
             (identical(other.price, price) || other.price == price) &&
-            (identical(other.userId, userId) || other.userId == userId));
+            (identical(other.userId, userId) || other.userId == userId) &&
+            (identical(other.expired, expired) || other.expired == expired));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, id, imgUrl, name, desc, date, lat, long, price, userId);
+  int get hashCode => Object.hash(runtimeType, id, imageUrl, name, desc, date,
+      lat, long, price, userId, expired);
 
   @JsonKey(ignore: true)
   @override
@@ -424,14 +442,15 @@ class _$_ProductModel implements _ProductModel {
 abstract class _ProductModel implements ProductModel {
   const factory _ProductModel(
       {final String? id,
-      final String? imgUrl,
+      final String? imageUrl,
       final String? name,
       final String? desc,
       final String? date,
       final double? lat,
       final double? long,
       final num? price,
-      final String? userId}) = _$_ProductModel;
+      final String? userId,
+      final String? expired}) = _$_ProductModel;
 
   factory _ProductModel.fromJson(Map<String, dynamic> json) =
       _$_ProductModel.fromJson;
@@ -439,7 +458,7 @@ abstract class _ProductModel implements ProductModel {
   @override
   String? get id;
   @override
-  String? get imgUrl;
+  String? get imageUrl;
   @override
   String? get name;
   @override
@@ -454,6 +473,8 @@ abstract class _ProductModel implements ProductModel {
   num? get price;
   @override
   String? get userId;
+  @override
+  String? get expired;
   @override
   @JsonKey(ignore: true)
   _$$_ProductModelCopyWith<_$_ProductModel> get copyWith =>
